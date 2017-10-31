@@ -1,0 +1,189 @@
+
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: 2em; /* must be the same height as footer */
+}
+
+body {
+  padding: 0;
+  margin: 0em 0 1em 0;
+  line-height: 1.5;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2em;
+  color: #494586;
+}
+
+header {
+  padding: 0em 0 1em 0;
+  float: left;
+  background-image: url(../images/edge.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+nav {
+  float: right;
+  padding: 1em 0 1em 0;
+}
+
+main {
+  clear: both;
+}
+
+footer {
+   clear: both;
+   padding: 1em 1em 1em 1.2em;
+   margin: 0;
+   background-image: url(../images/edge.png), linear-gradient(to top right, #00BCD4, #E91D63); /* Standard syntax from https://www.w3schools.com/css/css3_gradients.asp */;
+   background-repeat: repeat-x;
+   background-position: top;
+}
+
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  float: left;
+  padding: 1em 1em 1em 1em;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin: 0em 1em 0em 80px;
+  padding: 0;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0.5em 1em 0em 1em;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin: 0.5em 1em 0em 1em;
+  padding: 0;
+}
+
+p {
+  max-width: 900px;
+  margin: 0.5em 1.5em 0em 1.5em;
+  padding: 0;
+}
+
+blockquote {
+  font-family: 'Short Stack', cursive;
+  font-size: 1em;
+  line-height: 1.2;
+  border-left-color: #00BCD4;
+  border-left-style: dotted;
+  border-left-width: thick;
+  padding: 0.1em 1em 0.2em 1em;
+  margin: 1em 3em 1em 3em;
+}
+
+cite {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8em;
+}
+
+a {
+  padding: .5em .5em .5em .5em;
+  margin: 0;
+  color: #E91D63;
+  text-decoration: none;
+  /*border-bottom-style: solid;
+  border-color: #E91D63;*/
+}
+a:hover {
+  padding: .5em .5em .5em .5em;
+  margin: 0;
+  color: white;
+  text-decoration: none;
+  border-bottom-style: solid;
+  background-color: #E91D63;
+  border-color:#00BCD4;
+}
+/*a:visited {
+  padding: .5em .5em .5em .5em;
+  color: #00BCD4;
+  border-color:inherit;
+}*/
+a:active {
+  padding: .5em .5em .2em .5em;
+  margin: 0;
+  color: #00BCD4;
+}
+
+form {
+  width: 18em;
+  margin: 0.5em 1.5em 0em 1.5em;
+  float: left;
+}
+input,
+textarea {
+  border: 1px solid #00BCD4;
+  width: 400px;
+  margin-bottom: 1.5em;
+}
+input {
+  height: 2em;
+  width: 15em;
+  font-size: 1.2em;
+}
+textarea {
+  height: 4em;
+  width: 15em;
+  font-size: 1.2em;
+}
+button {
+  background: #E91D63;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  padding: 0.5em 2em;
+  font-size: 1.2em;
+  align-content: center;
+}
+
+.logo {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.opened {
+  color: white;
+  padding: .5em .5em .5em .5em;
+  background-color: #00BCD4;
+  border-color: #00BCD4;
+  border-bottom-style: solid;
+}
+
+.menu {
+border-bottom-style: solid;
+border-color: inherit;
+}
+
+.home {
+  background-image: url(../images/snowflakes.png);
+  background-repeat: space;
+}
+
+.highlight {
+  color: #00BCD4;
+  font-family: 'Short Stack', cursive;
+  text-transform: none;
+}
