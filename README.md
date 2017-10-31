@@ -15,4 +15,5 @@ To start a web server for the application, run:
 
 
 Copyright cornelia.works under GNU General Public License v3.0
+
 All images copyright cornelia.works - all rights reserved
