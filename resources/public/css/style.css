@@ -11,6 +11,7 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-size: 1.2em;
   color: #494586;
+  background-color: #EEFAFC;
 }
 
 header {
@@ -23,11 +24,12 @@ header {
 
 nav {
   float: right;
-  padding: 1em 0 1em 0;
+  padding: 1em 1em 1em 1em;
 }
 
 main {
   clear: both;
+  padding: 2em 0 2em 0;
 }
 
 footer {
@@ -97,6 +99,26 @@ blockquote {
 cite {
   font-family: 'Quicksand', sans-serif;
   font-size: 0.8em;
+  color: #00BCD4;
+}
+
+em {
+  color: #00BCD4;
+  font-family: 'Short Stack', cursive;
+  text-transform: none;
+}
+
+sub {
+  max-width: 18em;
+  margin: 0 1em 0 0;
+  padding: 0.5em 0.8em 0.3em 0.8em;
+  color: white;
+  background-color: #00BCD4;
+}
+
+sup {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0.4em;
 }
 
 a {
@@ -129,7 +151,7 @@ a:active {
 
 form {
   width: 18em;
-  margin: 0.5em 1.5em 0em 1.5em;
+  margin: 2em 1.5em 0em 1.5em;
   float: left;
 }
 input,
@@ -156,6 +178,24 @@ button {
   padding: 0.5em 2em;
   font-size: 1.2em;
   align-content: center;
+  margin: 0 0 2em 0;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em 0.5em 1em 0.5em;
+}
+
+.flex-item {
+    background: white;
+    width: 23em;
+    margin: 10px;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    padding: 1em 0 1.5em 0;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -175,15 +215,11 @@ button {
 .menu {
 border-bottom-style: solid;
 border-color: inherit;
+Background-color: white;
+box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-.home {
-  background-image: url(../images/snowflakes.png);
-  background-repeat: space;
-}
-
-.highlight {
-  color: #00BCD4;
-  font-family: 'Short Stack', cursive;
-  text-transform: none;
+.white{
+  color: white;
+  font-size: 0.6em;
 }
