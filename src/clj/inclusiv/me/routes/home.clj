@@ -2,12 +2,15 @@
   (:require [inclusiv.me.layout :as layout]
             [compojure.core :refer [defroutes GET]]
             [ring.util.http-response :as response]
-            [clojure.java.io :as io]))
+            [clojure.java.io :as io]
+            [inclusiv.me.db.core :as db]))
 
 (defn home-page []
-  (layout/render "index.html" {:actions [{:cat "Social" :rank "1"
-                                          :content "invite someone for coffee"
-                                          :author "inclusiv.me"}]}))
+  (let [dbactions (db/get-actions)]
+    (layout/render "index.html"
+                   {:actions dbactions})
+    )
+  )
 
 (defn about-page []
   (layout/render "about.html"))
