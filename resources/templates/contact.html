@@ -9,11 +9,7 @@
 	</head>
 	<body>
     <div class="page-wrap">
-	    <header>
-        <img class="logo" src="img/logo.png" alt="Logo representing a person of unknown gender"/>
-			  <h1>Inclusiv.me</h1>
-			  <h2>Small actions to  <em>change</em> the world</h2>
-		  </header>
+	   {% include "header.html" %}
       <nav>
         <a class="menu" href="/">Home</a>
         <a class="menu" href="about">About</a>
@@ -21,9 +17,9 @@
       </nav>
       <main>
         <h3>Suggest an idea</h3>
-        <p>Can you think of an action that's not in the list? We'd <em>love</em> to hear about it! If we decide to add it, we'll credit you too as a thanks. <b>All fields are mandatory.</b></p>
+        <p>Can you think of an action that's not in the app? We'd  <span class="highlight">love</span> to hear about it!</p>
         <form method="POST" action="">
-          <label for="name">Name or Nickname to be credited</label>
+          <label for="name">Name</label>
           <input id="name" type="text" name="name">
 
           <label for="email">Email</label>
@@ -37,9 +33,6 @@
         <img src="img/genderneutral.png"/>
       </main>
     </div>
-
-	  <footer class="white">
-		<p>Copyright <a class="white" href="http://cornelia.works">cornelia.works</a> under GNU General Public License v3.0 </p>
-	  </footer>
+		{% include "footer.html" %}
 	</body>
 </html>
