@@ -5,8 +5,9 @@
             [clojure.java.io :as io]))
 
 (defn home-page []
-  (layout/render
-    "index.html" {:docs (-> "docs/docs.md" io/resource slurp)}))
+  (layout/render "index.html" {:actions [{:cat "Social" :rank "1"
+                                          :content "invite someone for coffee"
+                                          :author "inclusiv.me"}]}))
 
 (defn about-page []
   (layout/render "about.html"))
@@ -18,4 +19,3 @@
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
   (GET "/contact" [] (contact-page)))
-
