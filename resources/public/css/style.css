@@ -192,7 +192,6 @@ button {
 .flex-item {
     background: white;
     width: 23em;
-    margin: 10px;
     margin: 0.5em 0.5em 0.5em 0.5em;
     padding: 1em 0 1.5em 0;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
