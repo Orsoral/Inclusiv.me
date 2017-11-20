@@ -1,12 +1,14 @@
 (ns inclusiv.me.routes.home
   (:require [inclusiv.me.layout :as layout]
+            [inclusiv.me.db.core :as db]
             [compojure.core :refer [defroutes GET]]
             [ring.util.http-response :as response]
             [clojure.java.io :as io]))
 
 (defn home-page []
-  (layout/render
-    "index.html" {:docs (-> "docs/docs.md" io/resource slurp)}))
+  (let [dbactions (db/get-actions)]
+    (layout/render "index.html"
+                   {:actions dbactions})))
 
 (defn about-page []
   (layout/render "about.html"))
@@ -18,4 +20,3 @@
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
   (GET "/contact" [] (contact-page)))
-

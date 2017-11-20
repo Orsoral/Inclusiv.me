@@ -9,11 +9,7 @@
 	</head>
 	<body>
 		<div class="page-wrap">
-			<header>
-			  <img class="logo" src="img/logo.png" alt="Logo representing a person of unknown gender"/>
-				<h1>Inclusiv.me</h1>
-				<h2>Small actions to <em>change</em> the world</h2>
-			</header>
+			{% include "header.html" %}
 			<nav>
 				<a class="opened" href="/">Home</a>
 				<a class="menu" href="about">About</a>
@@ -23,176 +19,16 @@
 				<h3>Give these small gestures a try</h3>
 				<p>It takes little to make the world a better place. Saying thank you, changing a poster on a wall, sharing orange juice... The options are limitless. Here's some inspiration from accross the world. <sub>Category<sup>1</sup></sub> is a quick fix. <sub>Category<sup>2</sup></sub> requires minimal effort. <sub>Category<sup>3</sup></sub> is a light commitment.</p>
 
-<!-- Prepared template for dynamic content format
+<!-- Prepared template for dynamic content format -->
 			  <div class="flex-container">
+					{% for action in actions %}
 			  		<div class="flex-item">
-			  			<p><sub>#Category<sup>#Rank</sup></sub>#Content<cite> - by #Author</cite></p>
+			  			<p><sub>{{action.category}}<sup>{{action.rank}}</sup></sub>{{action.content}}<cite> - by {{action.author}}</cite></p>
 			  		</div>
-				</div> -->
-
-
-				<div class="flex-container">
-					<div class="flex-item">
-						<p><sub>Social<sup>1</sup></sub>Have coffee with someone you know little<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social<sup>1</sup></sub>Have lunch with someone from a minority and learn more about them<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social<sup>1</sup></sub>Organize a tasting party of exotic foods, from your country of origin or from a vacation... <cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social<sup>1</sup></sub>Share a meal with someone from a minority, try their favorite foods and listen to what they like about it<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social<sup>1</sup></sub>Pair up with someone from a minority for your next project<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social<sup>1</sup></sub>Hang out with people from other demographics than your own<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social<sup>1</sup></sub>Invite the new employee to have a coffee with you<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social<sup>1</sup></sub>Invite the new employee to join you for lunch<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social<sup>1</sup></sub>Introduce two persons you know that don't know each other<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social<sup>1</sup></sub>Take a bit extra time to introduce someone you don't usually think of<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social<sup>1</sup></sub>At a networking event, Talk to the person standing alone and ask them what they thought about the speaker or the buffet<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Exposure<sup>1</sup></sub>Change your screensaver to a slideshow of diverse people<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Exposure<sup>1</sup></sub>Change your desktop background to a slideshow of a wide array of people<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Heroes<sup>1</sup></sub>Find a members of an underrepresented group that you admire<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Heroes<sup>1</sup></sub>Watch a talk by someone from a minority on a topic you are interested in<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Heroes<sup>1</sup></sub>Identify successful people from minorities in your company to become mentors<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social Media<sup>1</sup></sub>Find out the balance between genders among people you follow on social networks. If it is out of balance, find and follow a few more of the under-represented category<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social Media<sup>1</sup></sub>Look at the social content you share. Do you share content from one category of people more often than another?<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social Media<sup>1</sup></sub>Try to retweet only female voices for a week<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social Media<sup>1</sup></sub>Say Hi to new followers on social media<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social Media<sup>1</sup></sub>Look at a new follower's profile and share one of their posts you find useful<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social Media<sup>1</sup></sub>Invite people to join in a social media conversation you think might interest them<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Social Media<sup>1</sup></sub>Publish content on multiple channels to include people who might be interested but don't use a specific service<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Office Space<sup>1</sup></sub>In your office, replace a geeky decoration item by something non stereotypical, like a piece of nature<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Office Space<sup>2</sup></sub>Make sure you have at least one gender-neutral toilet available with a sink inside the stall<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Office Space<sup>2</sup></sub>Organise a <a href="">wheelchair game</a> to gain a new perspective on your office space<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Culture<sup>2</sup></sub>Read about a religion you don't know about<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Exposure<sup>1</sup></sub>Take a few minutes to imagine what a strong woman looks like, why, what she's capable of doing and what hobbies she enjoys<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Langage<sup>1</sup></sub>Today, instead of saying "Hey guys" try saying "Hi Folks" or "Hello everyone"<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Langage<sup>1</sup></sub>Today, instead of saying "Thanks guys" try saying "Thanks y'all" or "Good job people"<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>I'm minority<sup>1</sup></sub>Find a young talent to mentor<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>I'm minority<sup>1</sup></sub>Give a public speech about your area of expertise<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>I'm minority<sup>1</sup></sub>Bring a typical snack or drink from your culture for people to try out at a meeting<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Management<sup>1</sup></sub>Give 1% extra raise to women to bridge the salary gap a little more every time<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Management<sup>1</sup></sub>Give a leadership position to a high potential employee from a minority<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Management<sup>1</sup></sub>When recruting, give an interview to candidates who are different from your current team<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Leadership<sup>1</sup></sub>When you lead a new project, try to work with at least one new person<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Management<sup>1</sup></sub>When you assign people to teams, try to vary the team compositions so everyone gets to work with new persons<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Management<sup>1</sup></sub>Find out what motivates each person on your team most. Don't assume, ask them<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Leadership<sup>1</sup></sub>Write down 5 ideas on how inclusion and diversity can help you  meet your own and the wider organisation’s business  goals<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Management<sup>1</sup></sub>Sponsor someone with high potential who is from a group currently  under-represented in leadership to support them in realising their career  aspirations<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Management<sup>1</sup></sub>Identify the different values and drivers that  motivate those you manage or lead and do you leverage  these to help improve performance<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Management<sup>1</sup></sub>Ask those you manage or lead for feedback  on the impact of your style and approach in subporting them to perform well and/or progress their careers<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Management<sup>1</sup></sub>Look at your team in terms of gender, ethicity, weight, height, sexual orientation... Compare that to national proportions. Is any category under-represented?<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Management<sup>1</sup></sub>Find out what are each team member's unique needs, on a personal level, just just as an employee<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Self Awareness<sup>1</sup></sub>Take the <a href="https://implicit.harvard.edu/implicit/">implicit associations test</a><cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Self Awareness<sup>1</sup></sub>Take 5 minutes to reflect upon how everyone is different.<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Self Awareness<sup>1</sup></sub>Think about someone you know and write down how they are different from you<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Self Awareness<sup>1</sup></sub>Think about a minority group of people and write down some of the stereotypes you come up with about them. What can you do to reduce their potential negative impact?<cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Resources<sup>1</sup></sub>Read about <a href="https://open.buffer.com/7-simple-ways-to-to-be-more-inclusive-in-work-and-life/"> 7 ways to be more inclusive in work and life</a><cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Resources<sup>1</sup></sub>Read about <a href="https://www.themuse.com/advice/5-effortless-ways-to-be-more-inclusive-and-known-as-the-best-coworker-ever"> 5 Effortless Ways to Be More Inclusive </a><cite> - by Inclusiv.me</cite></p>
-					</div>
-					<div class="flex-item">
-						<p><sub>Resources<sup>1</sup></sub>Read about <a href="https://gender.bitc.org.uk/system/files/research/inclusive_leadership_-_from_pioneer_to_mainstream.pdf"> Inclusive Leadership </a><cite> - by Inclusiv.me</cite></p>
-					</div>
+					{% endfor %}
 				</div>
 			</main>
 		</div>
-		<footer class="white">
-			<p>Copyright <a class="white" href="http://cornelia.works">cornelia.works</a> under GNU General Public License v3.0 </p>
-		</footer>
+		{% include "footer.html" %}
 	</body>
 </html>

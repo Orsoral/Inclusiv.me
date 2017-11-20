@@ -9,11 +9,7 @@
 	</head>
 	<body>
     <div class="page-wrap">
-		    <header>
-          <img class="logo" src="img/logo.png" alt="Logo representing a person of unknown gender"/>
-			    <h1>Inclusiv.me</h1>
-  			  <h2>Small actions to <em>change</em> the world</h2>
-		    </header>
+				{% include "header.html" %}
         <nav>
           <a class="menu" href="/">Home</a>
           <a class="opened" href="about">About</a>
@@ -40,8 +36,6 @@
           </blockquote>
         </main>
     </div>
-		<footer class="white">
-			<p>Copyright <a class="white" href="http://cornelia.works">cornelia.works</a> under GNU General Public License v3.0 </p>
-		</footer>
+		{% include "footer.html" %}
 	</body>
 </html>

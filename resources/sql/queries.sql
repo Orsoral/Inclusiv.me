@@ -19,3 +19,6 @@ WHERE id = :id
 -- :doc deletes a user record given the id
 DELETE FROM users
 WHERE id = :id
+
+-- :name get-actions :? :*
+SELECT * FROM actions

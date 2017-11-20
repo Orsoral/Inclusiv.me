@@ -58,12 +58,12 @@
                                  [ring/ring-devel "1.6.2"]
                                  [pjstadig/humane-test-output "0.8.3"]]
                   :plugins      [[com.jakemccrary/lein-test-refresh "0.19.0"]]
-                  
+
                   :source-paths ["env/dev/clj"]
                   :resource-paths ["env/dev/resources"]
                   :repl-options {:init-ns user}
                   :injections [(require 'pjstadig.humane-test-output)
                                (pjstadig.humane-test-output/activate!)]}
    :project/test {:resource-paths ["env/test/resources"]}
-   :profiles/dev {}
+   :profiles/dev {:env {:database-url "jdbc:h2:./inclusiv_me_dev.db"}}
    :profiles/test {}})
