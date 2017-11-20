@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+				<title>Inclusiv.me</title>
+				<link rel="stylesheet" href="CSS/style.css">
+				<link rel="shortcut icon" href="favicon.ico">
+				<link href="https://fonts.googleapis.com/css?family=Short+Stack|Quicksand:300,400,500,700" rel="stylesheet">
+	</head>
+	<body>
+		<div class="page-wrap">
+			{% include "header.html" %}
+			<nav>
+				<a class="menu" href="/">Home</a>
+				<a class="menu" href="about">About</a>
+				<a class="menu" href="contact">Contact</a>
+			</nav>
+			<main>
+				<h3>Moderator's working page</h3>
+				<select>
+					<option value="1">Show pending</option>
+					<option value="2">Show published</option>
+					<option value="3">Show everything</option>
+				</select>
+
+<!-- Prepared template for dynamic content format -->
+			  <div class="flex-container">
+					{% for action in actions %}
+					<form class="flex-item" method="POST" action="">
+						<label for="category_{{action.id}}">Category<br></label>
+						<input id="category_{{action.id}}" type="text" name="category" value="{{action.category}}">
+
+						<label for="rank_{{action.id}}"><br>Rank<br></label>
+						<input id="rank_{{action.id}}" type="text" name="rank" value="{{action.rank}}">
+
+						<label for="content_{{action.id}}"><br>Describe your inclusive action :<br></label>
+						<textarea id="content_{{action.id}}" name="content">{{action.content}}</textarea>
+
+						<label for="author_{{action.id}}"><br>Author: - by <br></label>
+						<input id="author_{{action.id}}" type="text" name="author" value="{{action.author}}">
+
+						<label for="published_{{action.id}}">Published</label><input id="published_{{action.id}}" type="checkbox" name="published" value="{{action.published}}">
+
+						<button type="submit">Update</button>
+					</form>
+					{% endfor %}
+				</div>
+			</main>
+		</div>
+		{% include "footer.html" %}
+	</body>
+</html>

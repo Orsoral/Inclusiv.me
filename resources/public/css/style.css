@@ -154,21 +154,24 @@ form {
   margin: 2em 1.5em 0em 1.5em;
   float: left;
 }
+
 input,
 textarea {
   border: 1px solid #00BCD4;
-  width: 400px;
+  width: 16em;
   margin-bottom: 1.5em;
 }
 input {
   height: 2em;
-  width: 15em;
+  width: 16em;
   font-size: 1.2em;
+  padding: 0.2em 0.4em 0.2em 0.4em;
 }
 textarea {
   height: 4em;
-  width: 15em;
+  width: 16em;
   font-size: 1.2em;
+  padding: 0.2em 0.4em 0.2em 0.4em;
 }
 button {
   background: #E91D63;
@@ -179,6 +182,13 @@ button {
   font-size: 1.2em;
   align-content: center;
   margin: 0 0 2em 0;
+  border-radius: 0;
+}
+
+select {
+  display: block;
+  margin: auto;
+  font-size: 1.4em;
 }
 
 .flex-container {
