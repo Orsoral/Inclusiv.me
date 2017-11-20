@@ -20,8 +20,5 @@ WHERE id = :id
 DELETE FROM users
 WHERE id = :id
 
-
-
 -- :name get-actions :? :*
 SELECT * FROM actions
-
