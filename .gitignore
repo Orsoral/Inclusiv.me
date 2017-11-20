@@ -11,6 +11,6 @@ profiles.clj
 .nrepl-port
 /log
 **/.DS_Store
-//ignore database
+#ignore database
 inclusiv_me_dev.db.mv.db
 inclusiv_me_dev.db.trace.db
