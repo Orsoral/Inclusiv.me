@@ -3,4 +3,5 @@ CREATE TABLE actions
  category VARCHAR(30),
  content VARCHAR(1000),
  author VARCHAR(30),
- rank SMALLINT);
+ rank SMALLINT,
+ published BOOLEAN);
