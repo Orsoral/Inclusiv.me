@@ -21,4 +21,8 @@ DELETE FROM users
 WHERE id = :id
 
 -- :name get-actions :? :*
-SELECT * FROM actions
+SELECT * FROM actions WHERE published = TRUE
+ORDER BY rank
+
+-- :name get-all-actions :? :*
+SELECT * FROM actions ORDER BY rank
